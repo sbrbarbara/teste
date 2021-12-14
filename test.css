@@ -1,0 +1,165 @@
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+ 
+ /* font-family: 'Quicksand', sans-serif; */
+ 
+ :root {
+	--primary-color:#9C54E4;
+	--secondary-color:#FFFBFB;
+	--checked-color:#0ECA92;
+	--dark-checked-color:#16b384;
+}
+
+	*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html,body {
+	height:100vh;
+}
+
+#container {
+	padding:.8rem;
+	width:100%
+	font-family:'Quicksand';
+}
+
+h1 {
+	font-size:1.6rem;
+	margin-bottom:1rem;
+	font-weight:bold;
+	text-align:center;
+}
+
+h2 {
+	font-size:1rem;
+	font-weight:normal;
+	margin-bottom:1rem;
+}
+
+.tasks {
+	border-radius:5px;
+}
+
+.tasks {
+	background-color: var(--secondary-color);
+	color:black;
+	display:flex;
+	width:100%
+	align-items:center;
+	height:70px;
+	box-shadow:1px 1px 3px rgba(0,0,0,0.329);
+	padding:1.2rem;
+	margin-bottom:1rem;
+}
+
+.task .title {
+	margin-left:1rem;
+}
+
+.options button {
+	flex:1;
+	display:flex;
+	justify-content:end;
+}
+
+.options button {
+	appearance:none;
+	border:0;
+	background:0;
+	cursor:pointer;
+	
+}
+
+.edit-btn span {
+	color:var(--checked-color);
+}
+
+.delete-btn span {
+	color:red;
+}
+
+.tasks-todo, .tasks-done {
+	background:var(--primary-color);
+	padding:1rem .5rem 2rem .5rem;
+	border-radius:5px;
+	margin-top:1rem;
+	width:100%;
+	height:fit-content;
+	color:var(--secondary-color);
+}
+
+.do-btn {
+	background:rgba(156,84,228,0.1);
+	width:30px;
+	height:30px;
+	border:3px solid var(--checked-color);
+	border-radius:50%;
+}
+
+.do-btn:hover {
+	background:rgba(156,84,228,0.2);
+	border:3px solid var(--dark-checked-color);
+	cursor:pointer;
+}
+
+h2.title {
+	align-self:flex-start;
+	
+}
+
+.done-btn {
+	appearance:none;
+	border:0;
+	background:0;
+}
+
+.done-btn span {
+	color: var(---checked-color);
+	font-size:35px;
+}
+
+.done-btn span:hover {
+	color:var(--dark-checked-color);
+	cursor:pointer;
+}
+
+.tasks-done p {
+	text-decoration:line-through;
+	color:#424424;
+}
+
+.add-box {
+	width:100%;
+}
+
+.add-box input {
+	border-radius:5px;
+	background:var(--primary-color);
+	border:0;
+	outline:0;
+	width:100%;
+	color:var(--secondary-color);
+	padding:1.2rem 1.2rem;
+	font-size:1rem;
+}
+
+.add-box input::placeholder {
+	color:var(--secondary-color);
+	padding:6px 0;
+	border-bottom:1.5px solid #FFF;
+}
+
+@media (min-width:1200px) {
+	.main-content {
+		display:flex;
+		justify-content:space-between;
+	}
+	
+	.tasks-todo, .tasks-done {
+		width:49%;
+		margin-top:2rem;
+		min-height:130px;
+	}
+}
